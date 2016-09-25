@@ -48,3 +48,23 @@ set mouse=a            " Enable mouse usage (all modes) in terminals
 set number
 nnoremap <leader>av :tabnew $MYVIMRC<CR>
 highlight LineNr ctermfg=DarkGrey
+
+set rtp+=~/.vim/bundle/vundle/
+call vundle#rc()
+
+Bundle 'gmarik/vundle'
+
+Bundle 'flazz/vim-colorschemes'
+
+Bundle 'tpope/vim-commentary'
+
+noremap <C-h> <C-w>h
+noremap <C-j> <C-w>j
+noremap <C-k> <C-w>k
+noremap <C-l> <C-w>l
+
+nnoremap / /\v
+vnoremap / /\v
+
+
+noremap <leader><space> :noh<cr>:call clearmatches()<cr>
